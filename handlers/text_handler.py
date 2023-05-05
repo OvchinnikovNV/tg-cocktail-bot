@@ -11,5 +11,5 @@ def handle(bot: TeleBot):
 
         bot.send_message(
             message.from_user.id,
-            message.text
+            DATA['messages']['morze']
         )

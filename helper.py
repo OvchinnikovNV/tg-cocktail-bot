@@ -19,14 +19,14 @@ class GuestState:
         self.first_name: str = first_name
         self.last_name: str = last_name
         self.cocktail: Union[str, None] = None
-        self.selfie: bool = False
+        self.is_making: bool = False
 
     def __str__(self):
         return f"{self.username} ({self.first_name} {self.last_name})"
 
     def clear(self):
         self.cocktail = None
-        self.selfie = False
+        self.is_making = False
 
 
 DATA = json_loader('data.json')
