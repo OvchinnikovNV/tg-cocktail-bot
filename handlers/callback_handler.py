@@ -22,7 +22,7 @@ def handle(bot: TeleBot):
         if STATE[user_id].is_making:
             bot.send_message(
                 chat_id=user_id,
-                text=DATA['messages']['selfie'].format(get_cocktail_name(call.data)),
+                text=DATA['messages']['is_making'].format(get_cocktail_name(STATE[user_id].cocktail)),
                 parse_mode="Markdown"
             )
             return
